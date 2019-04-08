@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Sleeping Beauty - Dashboard</title>
+<link rel="stylesheet"
+	href="{{ url_for('static', filename='css/template.css') }}">
+</head>
+<body>
+	{% extends "index.html" %}
+    {% block content %}
+    
+	<section>
+		<h2>Dashboard</h2>
+		<ul>
+			<li><a href="">Start/Stop Monitoring</a></li>
+			<li><a href="">Turn Volume Down</a></li>
+			<li><a href="">Turn Volume Up</a></li>
+			<li><a href="">Switch Off Sleeping Beauty</a></li>
+			<li><a href="/v1/status">Status</a></li>
+		</ul>
+	</section>
+
+    {% endblock %}
+</body>
+</html>

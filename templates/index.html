@@ -13,21 +13,15 @@
 	</header>
 	<nav>
 		<ul>
-			<li><a href="">Dashboard</a></li>
-			<li><a href="">Web Services</a></li>
-			<li><a href="">Help</a></li>
+			<li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+			<li><a href="{{ url_for('webservices') }}">Web Services</a></li>
+			<li><a href="{{ url_for('help') }}">Help</a></li>
 		</ul>
 	</nav>
-	<section>
-		<h2>Dashboard</h2>
-		<ul>
-			<li><a href="">Start/Stop Monitoring</a></li>
-			<li><a href="">Turn Volume Down</a></li>
-			<li><a href="">Turn Volume Up</a></li>
-			<li><a href="">Switch Off Sleeping Beauty</a></li>
-			<li><a href="/v1/status">Status</a></li>
-		</ul>
-	</section>
+	
+	{% block content %}
+    {% endblock %}
+    
 	<footer>
 		<a href="https://kreinto.com">Kreinto</a> &copy; 2019 - version 1.0
 	</footer>

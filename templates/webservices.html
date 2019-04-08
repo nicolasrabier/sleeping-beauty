@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Sleeping Beauty Home</title>
+<link rel="stylesheet"
+	href="{{ url_for('static', filename='css/template.css') }}">
+</head>
+<body>
+    {% extends "index.html" %}
+    {% block content %}
+
+    <section>
+        <h2>Web Services</h2>
+        <p>To use the web services, you will need to connect to the device through it's IP address and create a API key through the admin console.</p>
+        <p>List of the web services available:</p>
+    </section>
+
+    {% endblock %}
+</body>
+</html>
