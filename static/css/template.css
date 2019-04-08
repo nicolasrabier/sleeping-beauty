@@ -5,7 +5,7 @@
 body{
     font-family: sans-serif;
     }
-header{
+header, footer{
     background-color: #222222;
     width: 100%;
     padding:10px;
@@ -21,7 +21,12 @@ nav li{
     display:inline-block;
     margin-left: 20px;
 }
+section{
+    margin:20px 75px;
+}
+h2{
+    margin:10px 0px;
+}
 footer{
-    background-color: #222222;
-    width: 100%;    
+    font-size:smaller;
 }
