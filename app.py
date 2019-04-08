@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def dashboard():
 	return render_template("dashboard.html")
 
 @app.route('/webservices')
@@ -11,7 +11,7 @@ def webservices():
 	return render_template("webservices.html")
 
 @app.route('/help')
-def webservices():
+def help():
 	return render_template("help.html")
 
 @app.route('/v1/status')
