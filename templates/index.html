@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Flask Tutorial</title>
-  </head>
-  <body>
-    <h1> My First Try Using Flask </h1>
-    <p> Flask is Fun </p>
-  </body>
+<head>
+<meta charset="utf-8">
+<title>Sleeping Beauty Home</title>
+<link rel="stylesheet"
+	href="{{ url_for('static', filename='css/template.css') }}">
+</head>
+<body>
+	<header>
+		<h1>Sleeping Beauty Home</h1>
+	</header>
+	<nav>
+	   <ul><li>home</li><li>web services</li><li>help</li></ul>
+	</nav>
+	<section>
+	   <h2>Sleep is Golden</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+			dapibus justo ullamcorper pulvinar fermentum. Sed dictum eleifend
+			ipsum nec dictum. Nam tincidunt rhoncus odio, et mattis elit. Aliquam
+			tellus lacus, gravida eu nisi non, convallis pharetra quam. Nullam ac
+			rutrum arcu. Sed id lorem ultrices, scelerisque sem id, ultrices
+			sapien. Phasellus efficitur ultricies orci ut facilisis. Suspendisse
+			pharetra a nisi vel blandit. Quisque dapibus neque vitae tortor
+			ultrices dignissim. Nulla facilisi. In dignissim pulvinar mattis.
+			Integer sodales augue ac tellus imperdiet, id sollicitudin sem
+			tincidunt. Ut vehicula elit imperdiet lorem tristique, tempor
+			ullamcorper nulla pretium.</p>
+	</section>
+	<footer>
+		<a href="https://kreinto.com">Kreinto</a> &copy; 2019 - version 1.0
+	</footer>
+</body>
 </html>
