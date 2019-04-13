@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-import subprocess
+import os
 from sys import stdout
 
 app = Flask(__name__)
@@ -18,9 +18,11 @@ def help():
 
 @app.route('/v1/poweroff', methods=['GET'])
 def poweroff():
-	cmdCommand = "shutdown -h now"
-	process = subprocess.Popen(cmdCommand.split(), stdout=subprocess.PIPE)
-	return jsonify(status="SHUTTING_DOWN", process_pid=process.pid, process_return_code=process.returncode)
+	# cmdCommand = "shutdown -h now"
+	# process = subprocess.Popen(cmdCommand.split(), stdout=subprocess.PIPE)
+	# return jsonify(status="SHUTTING_DOWN", process_pid=process.pid, process_return_code=process.returncode)
+	os.system("shutdown now -h")
+	return jsonify(status="SHUTTING_DOWN")
 
 @app.route('/v1/status', methods=['GET'])
 def status():
