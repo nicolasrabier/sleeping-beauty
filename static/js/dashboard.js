@@ -1,15 +1,15 @@
 $('#startstopmonitoring').click(function(){
-    window.location = '';
+    document.location.href = '';
 });
 $('#turnvolumedown').click(function(){
-    window.location = '';
+    document.location.href = '';
 });
 $('#turnvolumeup').click(function(){
-    window.location = '';
+    document.location.href = '';
 });
 $('#poweroff').click(function(){
-    window.location = '/v1/poweroff';
+    document.location.href = '/v1/poweroff';
 });
 $('#status').click(function(){
-    window.location = '/v1/status';
+    document.location.href = '/v1/status';
 });
