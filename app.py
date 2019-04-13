@@ -20,7 +20,7 @@ def help():
 def poweroff():
 	cmdCommand = "shutdown -h now"
 	process = subprocess.Popen(cmdCommand.split(), stdout=subprocess.PIPE)
-	return jsonify(status="SHUTTING_DOWN", process_pid=process.pid)
+	return jsonify(status="SHUTTING_DOWN", process_pid=process.pid, process_return_code=process.returncode)
 
 @app.route('/v1/status', methods=['GET'])
 def status():
