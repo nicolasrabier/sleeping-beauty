@@ -21,3 +21,5 @@ while True:
 		else:
 			print("------------------")
 	previousvalue=currentvalue
+
+# sensor._queue.stop()

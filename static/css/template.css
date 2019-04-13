@@ -29,14 +29,17 @@ section{
 }
 section li{
     list-style:none;
-    padding: 10px;
+    padding: 3px;
 }
 section li a{
-    padding:10px;   
+    padding:10px;
+    border: 1px solid #ddd;
+    display:block;
+    max-width: 200px;
 }
 h2{
     margin:10px 0px;
-    color:red;
+    color:cadetblue;
 }
 footer{
     font-size:smaller;
