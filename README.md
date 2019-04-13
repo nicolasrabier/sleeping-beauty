@@ -1,8 +1,10 @@
 # sleeping-beauty
 
+Note: documentation incomplete. work in progress.
+
 ## What is Sleeping Beauty project?
 
-THe goal of Sleeping Beauty Project is to help parents sleeping longer period of time by calming their dear babies with familiar sounds and musics.
+The goal of Sleeping Beauty Project is to help parents sleeping longer period of time by calming their dear babies with familiar sounds and musics.
 The Sleeping Beauty will start playing familiar sounds when the baby gets agitated.
 It is IoT project that includes a piece of sotftware and hardware. 
 
@@ -19,12 +21,12 @@ Raspbian with Python3 and Flask
 
 ## Installation & Configuration
 
-Install git
-Install python3
-Install flask: pip install flask
-`mkdir /home/nic/logs`
-`chmod 755 /home/nic/sleeping-beauty/launcher.sh`
-`crontab -l; echo "@reboot sh /home/nic/sleeping-beauty/launcher.sh >/home/nic/logs/cronlog 2>&1" | crontab -`
+- Install git
+- Install python3
+- Install flask: `pip install flask`
+- Create logs folder: `mkdir /home/pi/logs`
+- Add executing right to launcher: `chmod 755 /home/pi/sleeping-beauty/launcher.sh`
+- Add to crontab: `crontab -l; echo "@reboot sh /home/pi/sleeping-beauty/launcher.sh >/home/pi/logs/cronlog 2>&1" | crontab -`
 
 ## TODO
 - Start app after booting Pi
