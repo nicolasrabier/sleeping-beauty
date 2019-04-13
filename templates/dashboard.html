@@ -7,16 +7,27 @@
 <body>
 	{% extends "index.html" %} {% block content %}
 
-	<section>
+	<div class="page-header">
 		<h2>Dashboard</h2>
-		<ul>
-			<li><a href="">Start/Stop Monitoring</a></li>
-			<li><a href="">Turn Volume Down</a></li>
-			<li><a href="">Turn Volume Up</a></li>
-			<li><a href="/v1/poweroff">Power Off</a></li>
-			<li><a href="/v1/status">Status</a></li>
-		</ul>
-	</section>
+	</div>
+	<p>
+        <button type="button" class="btn btn-lg btn-default" id="startstopmonitoring">Start/Stop Monitoring</button>
+    </p>
+    <p>    
+        <button type="button" class="btn btn-lg btn-default" id="turnvolumedown">Turn Volume Down</button>
+    </p>
+    <p>       
+        <button type="button" class="btn btn-lg btn-default" id="turnvolumeup">Turn Volume Up</button>
+    </p>
+    <p>    
+        <button type="button" class="btn btn-lg btn-danger" id="poweroff">Power Off</button>
+    </p>
+    <p>    
+        <button type="button" class="btn btn-lg btn-info" id="status">Status</button>
+    </p>
+    
+
+	
 
 	{% endblock %}
 	<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
