@@ -5,9 +5,8 @@
 <title>Sleeping Beauty - Dashboard</title>
 </head>
 <body>
-	{% extends "index.html" %}
-    {% block content %}
-    
+	{% extends "index.html" %} {% block content %}
+
 	<section>
 		<h2>Dashboard</h2>
 		<ul>
@@ -19,6 +18,7 @@
 		</ul>
 	</section>
 
-    {% endblock %}
+	{% endblock %}
+	<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 </body>
 </html>

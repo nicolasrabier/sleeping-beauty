@@ -27,12 +27,19 @@ Raspbian with Python3 and Flask
 - Create logs folder: `mkdir /home/pi/logs`
 - Add executing right to launcher: `chmod 755 /home/pi/sleeping-beauty/launcher.sh`
 - Add to crontab: `crontab -l; echo "@reboot sh /home/pi/sleeping-beauty/launcher.sh >/home/pi/logs/cronlog 2>&1" | crontab -`
+- Remove password entry when shuttin down: `sudo visudo` 
+- Append to the file: `pi ALL=(ALL) NOPASSWD:/sbin/shutdown`
 
 ## TODO
-- Start app after booting Pi
-- Switch off Pi from flask
+- Add confirmation box before powering off Pi
 - Start/stop monitoring
 - Turn volume up / down from flask
+- Upload your own music
+- Link to youtube video
+- Link to spotify
+- Link to soundcloud
+- Add LED for monitor power
+- Add button to power on and off the Pi
 - Box device & dress it for babies / toddlers
 - Develop an installer that will ease deployment of software on virgin Raspbian OS (python3, flask, ...)
 - Ease connection between Sleeping Beauty Box and mobile phones (IoT)
