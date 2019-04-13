@@ -16,8 +16,8 @@ def webservices():
 def help():
 	return render_template("help.html")
 
-@app.route('/v1/switchoff', methods=['GET'])
-def switchoff():
+@app.route('/v1/poweroff', methods=['GET'])
+def poweroff():
 	cmdCommand = "shutdown -h now"
 	process = subprocess.Popen(cmdCommand.split(), stdout=subprocess.PIPE)
 	return jsonify(status="SHUTTING_DOWN", process_pid=process.pid)
