@@ -8,9 +8,9 @@ $('#turnvolumeup').click(function() {
     document.location.href = '';
 });
 $('#poweroff').click(function() {
-    $('#poweroff').css("dislpay","none");
-    $('#poweroffconfirm').css("dislpay","block");
-    $('#poweroffcancel').css("dislpay","block");
+    $('#poweroff').toggle(false);
+    $('#poweroffconfirm').toggle(true);
+    $('#poweroffcancel').toggle(true);
     /*
     ConfirmDialog('Confirmation', 'Are you sure to power off the device?',
         function() {
@@ -24,9 +24,9 @@ $('#poweroffconfirm').click(function() {
     document.location.href = '/v1/poweroff';
 });
 $('#poweroffcancel').click(function() {
-    $('#poweroff').css("dislpay","block");
-    $('#poweroffconfirm').css("dislpay","none");
-    $('#poweroffcancel').css("dislpay","none");
+    $('#poweroff').toggle(true);
+    $('#poweroffconfirm').toggle(false);
+    $('#poweroffcancel').toggle(false);
 });
 $('#status').click(function() {
     document.location.href = '/v1/status';
