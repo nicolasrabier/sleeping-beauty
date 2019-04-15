@@ -6,7 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def dashboard():
-	return render_template("dashboard.html")
+	#TODO: check if monitoring is started or not
+	start_stop_monitoring_button_label='Start Monitoring'
+	
+	return render_template("dashboard.html", start_stop_monitoring_button_label=start_stop_monitoring_button_label)
 
 @app.route('/webservices')
 def webservices():
@@ -15,6 +18,16 @@ def webservices():
 @app.route('/help')
 def help():
 	return render_template("help.html")
+
+@app.route('/v1/startmonitoring', methods=['GET'])
+def startmonitoring():
+	
+	return jsonify(status="MONITORING STARTED")
+
+@app.route('/v1/stopmonitoring', methods=['GET'])
+def stopmonitoring():
+
+	return jsonify(status="MONITORING STOPPED")
 
 @app.route('/v1/poweroff', methods=['GET'])
 def poweroff():
