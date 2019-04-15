@@ -8,11 +8,25 @@ $('#turnvolumeup').click(function() {
     document.location.href = '';
 });
 $('#poweroff').click(function() {
+    $('#poweroff').css("dislpay","none");
+    $('#poweroffconfirm').css("dislpay","block");
+    $('#poweroffcancel').css("dislpay","block");
+    /*
     ConfirmDialog('Confirmation', 'Are you sure to power off the device?',
         function() {
+            
             //document.location.href = '/v1/poweroff';
-            alert('HERE');
+            
         });
+    */
+});
+$('#poweroffconfirm').click(function() {
+    document.location.href = '/v1/poweroff';
+});
+$('#poweroffcancel').click(function() {
+    $('#poweroff').css("dislpay","block");
+    $('#poweroffconfirm').css("dislpay","none");
+    $('#poweroffcancel').css("dislpay","none");
 });
 $('#status').click(function() {
     document.location.href = '/v1/status';
@@ -29,7 +43,9 @@ function ConfirmDialog(title, message, yesCallback) {
             width: 'auto',
             resizable: false,
             buttons: {
-                Yes: yesCallback(),
+                Yes: function() {
+                    yesCallback();
+                },
                 No: function() {
                     $(this).dialog("close");
                 }
