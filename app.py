@@ -29,13 +29,14 @@ def help():
 @app.route('/v1/startmonitoring', methods=['GET'])
 def startmonitoring():
 	
-	print("startmonitoring()")
+	print("startmonitoring() - monitoring_status: ", monitoring_status)
 	if not monitoring_thread.isAlive():
 		monitoring_thread.start()
 	
 	monitoring_thread.resume()
 	
 	monitoring_status = "STARTED"
+	print("monitoring_status: ", monitoring_status)
 	return renderdashboard()
 
 @app.route('/v1/stopmonitoring', methods=['GET'])
@@ -46,6 +47,7 @@ def stopmonitoring():
 		monitoring_thread.pause()
 	
 	monitoring_status = "STOPPED"
+	print("monitoring_status: ", monitoring_status)
 	return renderdashboard()
 
 @app.route('/v1/poweroff', methods=['GET'])
@@ -67,6 +69,7 @@ def status():
 def renderdashboard():
 	#TODO: check if monitoring is started or not
 	## and change label definition
+	print("renderdashboard() - monitoring_status: ", monitoring_status)
 	if monitoring_status == "STOPPED":
 		monitoring_button_label='Start Monitoring'
 	else:
