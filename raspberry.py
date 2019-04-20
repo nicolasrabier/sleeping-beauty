@@ -32,3 +32,7 @@ class RaspberryThread(threading.Thread):
     def stop(self):
         with self.state:
             self.stop()
+            
+    def kill(self):
+        with self.state:
+            self.kill()
