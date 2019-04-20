@@ -28,7 +28,7 @@ def help():
 #========== WEB SERVICES ==============
 @app.route('/v1/startmonitoring', methods=['GET'])
 def startmonitoring():
-	
+	global monitoring_status
 	print("startmonitoring() - monitoring_status: ", monitoring_status)
 	if not monitoring_thread.isAlive():
 		monitoring_thread.start()
@@ -41,7 +41,7 @@ def startmonitoring():
 
 @app.route('/v1/stopmonitoring', methods=['GET'])
 def stopmonitoring():
-	
+	global monitoring_status
 	print("stopmonitoring()")
 	if not monitoring_thread.isAlive():
 		monitoring_thread.pause()
@@ -69,6 +69,7 @@ def status():
 def renderdashboard():
 	#TODO: check if monitoring is started or not
 	## and change label definition
+	global monitoring_status
 	print("renderdashboard() - monitoring_status: ", monitoring_status)
 	if monitoring_status == "STOPPED":
 		monitoring_button_label='Start Monitoring'
