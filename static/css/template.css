@@ -2,8 +2,11 @@ body {
     padding-top: 70px;
     padding-bottom: 30px;
 }
+div.controls {
+	text-align: center;
+}
 div.controls button.btn{
-	width:250px;
+	/* width:250px; */
 }
 
 .theme-dropdown .dropdown-menu {

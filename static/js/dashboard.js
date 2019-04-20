@@ -1,5 +1,9 @@
 $('#startstopmonitoring').click(function() {
-    document.location.href = '';
+    if($('#monitoringstatus').text() == 'STOPPED') {
+        document.location.href = '/v1/startmonitoring';
+    } else {
+        document.location.href = '/v1/stopmonitoring';
+    }
 });
 $('#turnvolumedown').click(function() {
     document.location.href = '';
