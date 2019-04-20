@@ -29,6 +29,6 @@ $('#status').click(function() {
 });
 
 $( document ).ready(function() {
-    $('#messagebox').text("Your screen resolution is: " + window.screen.width * window.devicePixelRatio + "x" + window.screen.height * window.devicePixelRatio);
+    $('#messagebox').text("Your screen resolution is: " + window.screen.width * window.devicePixelRatio + "x" + window.screen.height * window.devicePixelRatio + "[" + window.screen.width + "x" + window.screen.height + "]");
 });
 
