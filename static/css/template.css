@@ -1,6 +1,7 @@
 body {
     padding-top: 70px;
     padding-bottom: 30px;
+    text-align: center;
 }
 div.controls {
 	text-align: center;
@@ -8,17 +9,14 @@ div.controls {
 div.controls button.btn{
 	/* width:250px; */
 }
-
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
   margin-bottom: 20px;
 }
-
 .theme > p > .btn {
   margin: 5px 0;
 }
-
 .theme .navbar .container {
   width: auto;
 }
