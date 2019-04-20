@@ -29,6 +29,7 @@ def help():
 @app.route('/v1/startmonitoring', methods=['GET'])
 def startmonitoring():
 	
+	print("startmonitoring()")
 	if not monitoring_thread.isAlive():
 		monitoring_thread.start()
 	
@@ -40,6 +41,7 @@ def startmonitoring():
 @app.route('/v1/stopmonitoring', methods=['GET'])
 def stopmonitoring():
 	
+	print("stopmonitoring()")
 	if not monitoring_thread.isAlive():
 		monitoring_thread.pause()
 	
