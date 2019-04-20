@@ -44,7 +44,7 @@ def stopmonitoring():
 	global monitoring_status
 	print("stopmonitoring()")
 	if not monitoring_thread.isAlive():
-		monitoring_thread.pause()
+		monitoring_thread.stop()
 	
 	monitoring_status = "STOPPED"
 	print("monitoring_status: ", monitoring_status)

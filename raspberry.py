@@ -28,3 +28,7 @@ class RaspberryThread(threading.Thread):
     def pause(self):
         with self.state:
             self.paused = True
+            
+    def stop(self):
+        with self.state:
+            self.stop()
