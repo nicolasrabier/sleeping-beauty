@@ -27,3 +27,8 @@ $('#poweroffcancel').click(function() {
 $('#status').click(function() {
     document.location.href = '/v1/status';
 });
+
+$( document ).ready(function() {
+    $('#messagebox').text("Your screen resolution is: " + window.screen.width * window.devicePixelRatio + "x" + window.screen.height * window.devicePixelRatio);
+});
+
