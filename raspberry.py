@@ -30,9 +30,7 @@ class RaspberryThread(threading.Thread):
             self.paused = True
             
     def stop(self):
-        with self.state:
-            self.stop()
+        self.stop()
             
     def kill(self):
-        with self.state:
-            self.kill()
+        self.kill()
